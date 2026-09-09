@@ -118,6 +118,7 @@ func (a *linuxApp) run() error {
 	a.setupCommonEvents()
 	// Theme changes are already monitored by listenForSystemThemeChanges via init();
 	// it uses the portal-standard org.freedesktop.appearance namespace.
+	a.monitorThemeChanges()
 	a.monitorPowerEvents()
 	return appRun(a.application)
 }
